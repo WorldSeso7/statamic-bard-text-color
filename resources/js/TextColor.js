@@ -21,7 +21,7 @@ export default class TextColor {
       ],
       toDOM: (mark) => [
         "span",
-        { style: `color: ${mark.attrs.color}!important;` },
+        { style: `color: ${mark.attrs.color}` },
         0,
       ],
     };
