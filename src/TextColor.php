@@ -18,7 +18,7 @@ class TextColor extends Mark
             [
                 'tag' => 'span',
                 'attrs' => [
-                    'style' => "color:{$this->mark->attrs->color}!important;",
+                    'style' => "color:{$this->mark->attrs->color};",
                 ],
             ],
         ];
