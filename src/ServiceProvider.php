@@ -23,7 +23,7 @@ class ServiceProvider extends AddonServiceProvider
 
         $colors = [];
         if (!is_null(config('bard-custom-colors.custom_method'))) {
-            $colors = config('bard-custom-colors.custom_method')();
+            $colors = call_user_func(config('bard-custom-colors.custom_method'));
         }
         else {
             $colors = config('bard-custom-colors');
