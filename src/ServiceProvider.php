@@ -20,8 +20,16 @@ class ServiceProvider extends AddonServiceProvider
         ], 'bard-custom-colors');
 
         Augmentor::addMark(TextColor::class);
+
+        $colors = [];
+        if (!is_null(config('bard-custom-colors.custom_method'))) {
+            $colors = config('bard-custom-colors.custom_method')();
+        }
+        else {
+            $colors = config('bard-custom-colors');
+        }
         Statamic::provideToScript([
-            'bard-custom-colors' => config('bard-custom-colors'),
+            'bard-custom-colors' => $colors,
         ]);
     }
 }

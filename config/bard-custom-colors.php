@@ -12,5 +12,9 @@
    *    ]
    */
 return [
+    'custom_method' => null,
+    'colors' => [
+
+    ]
 ];
 ?>
