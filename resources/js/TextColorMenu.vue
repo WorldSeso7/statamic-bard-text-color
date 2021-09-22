@@ -10,7 +10,7 @@
       @click="showColorMenu = !showColorMenu"
     />
     <div class="absolute left-10 bg-gray-200 px-1 rounded-sm flex flex-wrap min-w-250 lg:min-w-500 z-10 max-h-300px overflow-y-scroll" :class="{ hidden: !showColorMenu }">
-      <div class="flex flex-wrap py-2 w-full px-1" style="display: none">
+      <div class="flex flex-wrap py-2 w-full px-1" style="display: none !important;">
         <p class="font-bold w-full mb-2">Color pack</p>
         <div class="inline-flex items-center">
             <input id="radio-color-default" class="form-radio" type="radio" v-model="selectedGroup" value="default" @click="switchColors('default')">
